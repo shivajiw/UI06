@@ -5,6 +5,45 @@
 <li>Salary {{Salary}}</li>
 </ul>
 
+
+
 <button (click)="changeSalary()">
     Salary
 </button>
+
+<br>
+<br>
+<div> Display informatioin of a single employee  </div>
+
+<ul>
+    <li> Employee ID :-  {{ empDetails.id }} </li>
+    <li> Employee Name :- {{ empDetails.fname }} </li>
+    <li> Employee Date of Birth :- {{ empDetails.dob}} </li>
+    <li> Degignation :- {{ empDetails.deg }} </li>
+    <li> Salary :- {{ empDetails.salary }} </li>
+</ul>
+<br>
+<br>
+<div> Display informatioin of a single employee  </div>
+<br>
+<br>
+
+<table>
+    <tr>
+        <th> ID </th>
+        <th> Name </th>
+        <th> DOB </th>
+        <th> Salary </th>
+        <th> Designation </th>
+    </tr>
+    <tr *ngFor="let emp of allEmployess">
+        <td *ngIf="emp.id == '2331647'"> {{ emp.id }} </td>
+        <td *ngIf="emp.id == '2331647'"> {{ emp.fname }} </td>
+        <td *ngIf="emp.id == '2331647'"> {{ emp.dob }} </td>
+        <td *ngIf="emp.id == '2331647'"> {{ emp.salary }} </td>
+        <td *ngIf="emp.id == '2331647'"> {{ emp.deg }} </td>
+    </tr>
+</table>
+
+<br>
+<br>
