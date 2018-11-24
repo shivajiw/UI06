@@ -1,0 +1,33 @@
+<div class="main_cont">
+  <h1>
+    {{ pageName }}
+  </h1>
+
+  <div class="emp_cont">
+    <ul>
+      <li> First Name : {{ empInfo.fname }} </li>
+      <li> City : {{ empInfo.city }} </li>
+      <li> Salary : {{ empInfo.salary }} </li>
+      <li> Experience : {{ empInfo.exp }} </li>
+      <li> Designation : {{ empInfo.deg }} </li>
+    </ul>
+  </div>
+  <div class="table_cont">
+    <table>
+      <tr>
+        <th> Name </th>
+        <th> City </th>
+        <th> Salary </th>
+        <th> Designation </th>
+        <th> Experience </th>
+      </tr>
+      <tr [ngClass]="{'highlight_row':emp.exp >= 5 }" *ngFor="let emp of employees">
+        <td> {{ emp.fname }} </td>
+        <td> {{ emp.city }} </td>
+        <td> {{ emp.salary }} </td>
+        <td> {{ emp.deg }} </td>
+        <td> {{ emp.exp }} </td>
+      </tr>
+    </table>
+  </div>
+</div>

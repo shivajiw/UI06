@@ -1,0 +1,22 @@
+  ul{
+      float:left;
+      list-style: none;
+      background-color: black;
+      height: 40px;
+      width: 100%;
+  }
+  li,a{
+      float: left;
+      padding:5px;
+      color: white;
+       
+     text-decoration:none;    
+  }
+  li:hover{
+      background-color: blueviolet;
+      
+  }
+
+  .active{
+      color: red;
+  }
