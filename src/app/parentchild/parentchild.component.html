@@ -1,0 +1,8 @@
+<div class="main">
+    <div class="wrapper" *ngFor="let emoData of employeeArray">
+      <h3 class="empname" [ngClass]="{'activeemp': emoData.id == currentClickedId}"> {{ emoData.name }} </h3>
+      <div class="addressdetails">
+        <child (myID)="getIdFromChild($event)" [title]='emoData.address'> </child>
+      </div>
+    </div>
+</div>

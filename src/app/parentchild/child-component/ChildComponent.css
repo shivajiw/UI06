@@ -1,0 +1,19 @@
+
+.addressdetails{
+    width: 100%;
+    float: left;
+    padding: 10px;
+    border: 1px solid red;
+}
+
+.addressdetails ul{
+    margin-left: 30px;
+}
+
+.mybtn{
+    padding: 10px;
+    background-color: red;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}

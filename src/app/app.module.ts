@@ -8,10 +8,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { FirstComponent } from './first/first.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { NavComponent } from './nav/nav.component';
+import { ParentchildComponent } from './parentchild/parentchild.component';
+import { ChildComponent } from './parentchild/child-component/ChildComponent';
+
 
 const appRoutes: Routes = [
   { path: 'first', component: FirstComponent },
-  { path: 'directive', component: DirectiveComponent }
+  { path: 'directive', component: DirectiveComponent },
+  { path: 'parent/child', component: ParentchildComponent }
 ];
 
 @NgModule({
@@ -19,7 +23,11 @@ const appRoutes: Routes = [
     AppComponent,
     MyComComponent, 
     MyTest, 
-    FirstComponent, DirectiveComponent, NavComponent
+    FirstComponent,
+    DirectiveComponent,
+    NavComponent,
+    ParentchildComponent, 
+    ChildComponent
   ],
   imports: [
     BrowserModule,
