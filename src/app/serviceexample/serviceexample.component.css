@@ -1,0 +1,31 @@
+.main_cont{
+    width: 100%;
+    float: left;
+    padding: 20px;
+}
+
+.emp_cont, .table_cont{
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+}
+
+
+table, td, th {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.highlight_row{
+    background-color: brown;
+}
+
+.highlight_row td{
+    color: #fff;
+}

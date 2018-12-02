@@ -10,12 +10,15 @@ import { DirectiveComponent } from './directive/directive.component';
 import { NavComponent } from './nav/nav.component';
 import { ParentchildComponent } from './parentchild/parentchild.component';
 import { ChildComponent } from './parentchild/child-component/ChildComponent';
+import { ServiceexampleComponent } from './serviceexample/serviceexample.component';
 
+import { ApplicationService } from './applicationservice';
 
 const appRoutes: Routes = [
   { path: 'first', component: FirstComponent },
   { path: 'directive', component: DirectiveComponent },
-  { path: 'parent/child', component: ParentchildComponent }
+  { path: 'parent/child', component: ParentchildComponent },
+  { path: 'service', component: ServiceexampleComponent }
 ];
 
 @NgModule({
@@ -27,13 +30,13 @@ const appRoutes: Routes = [
     DirectiveComponent,
     NavComponent,
     ParentchildComponent, 
-    ChildComponent
+    ChildComponent, ServiceexampleComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ApplicationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

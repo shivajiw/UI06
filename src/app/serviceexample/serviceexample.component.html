@@ -1,0 +1,38 @@
+<p>
+ Application Name {{ getApplicationName }}
+ User Name {{ userName }}
+</p>
+
+Employee Info 
+<p>
+  Name {{ empInfo.name }}
+</p>
+
+<div class="main_cont">
+  <h1>
+    {{ pageName }}
+  </h1>
+
+  <div class="emp_cont">
+
+  </div>
+  <div class="table_cont">
+    <table>
+      <tr>
+        <th> Name </th>
+        <th> City </th>
+        <th> Salary </th>
+        <th> Designation </th>
+        <th> Experience </th>
+      </tr>
+      <tr [ngClass]="{'highlight_row':emp.exp >= 5 }" *ngFor="let emp of employees">
+        <td> {{ emp.fname }} </td>
+        <td> {{ emp.city }} </td>
+        <td> {{ emp.salary }} </td>
+        <td> {{ emp.deg }} </td>
+        <td> {{ emp.exp }} </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
