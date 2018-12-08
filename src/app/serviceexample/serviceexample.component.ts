@@ -24,6 +24,35 @@ export class ServiceexampleComponent implements OnInit {
    this.empInfo = this._applicationService.empInfo;
    this.employees = this._applicationService.getEmployeeDetails();
 
+   this._applicationService.getAllEployess().subscribe((data: {}) => {
+
+    this.employees = data;
+
+  },
+    err => { 
+
+      alert("Error");
+
+     }
+  );    
+   
+/*
+
+ this._myserviceService.getFormData().subscribe((data: {}) => {
+      this.formData = data;
+      this.isFormShown = true;
+      console.log( data );
+
+    },
+      err => { 
+        console.log( err );
+        this.formData = err;
+        this.isFormShown = false;
+
+       }
+    );
+*/
+
   }
 
 }

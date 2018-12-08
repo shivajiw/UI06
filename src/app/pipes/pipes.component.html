@@ -1,0 +1,23 @@
+<div class="wrapper">
+
+<ul>
+  <li> Name: {{ empInfo.name | uppercase }} </li>
+  <li> Last Name: {{ empInfo.lname | lowercase }} </li>
+  <li> DOJ {{ empInfo.doj | date:'dd/MM/yy' }} </li>
+  <li> Salary {{ empInfo.sal | currency }} </li>
+  <li> Salary {{ empInfo.sal | currency:'EUR' }} </li>
+
+<li> Object {{ empInfo | json  }} </li>
+
+  <!-- <li> DOJ {{ empInfo.doj | date }} </li> -->
+  <!-- <li> DOJ {{ empInfo.doj | date:'shortDate' }} </li> -->
+  <!-- <li> DOJ {{ empInfo.doj | date:'fullDate' }} </li> -->
+
+
+</ul>
+
+<br>
+
+<input type="date" />
+
+</div>
